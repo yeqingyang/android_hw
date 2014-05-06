@@ -33,7 +33,6 @@ public class picView extends Activity {
 				// TODO Auto-generated method stub
 				if (curImg >= 1) {
 					curImg = -1;
-					finish();
 				}
 				image.setImageResource(images[++curImg]);
 			}
