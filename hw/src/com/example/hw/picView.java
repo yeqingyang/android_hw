@@ -1,14 +1,17 @@
 package com.example.hw;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 public class picView extends Activity {
 	int[] images = new int[] { R.drawable.balloon, R.drawable.bear, };
@@ -19,7 +22,7 @@ public class picView extends Activity {
 		super.onCreate(savedInstanceState);
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.pic);
-		LinearLayout main = (LinearLayout) findViewById(R.id.root);
+		RelativeLayout main = (RelativeLayout) findViewById(R.id.root);
 		final ImageView image = new ImageView(this);
 		main.addView(image);
 		image.setImageResource(images[0]);
@@ -30,8 +33,20 @@ public class picView extends Activity {
 				// TODO Auto-generated method stub
 				if (curImg >= 1) {
 					curImg = -1;
+					finish();
 				}
 				image.setImageResource(images[++curImg]);
+			}
+		});
+		
+		Button bn = (Button)findViewById(R.id.button1);
+		bn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				//主activity没有finish这里finish后返回主activity
+				finish();
 			}
 		});
 	}
@@ -43,21 +58,4 @@ public class picView extends Activity {
 		return true;
 	}
 	
-	@Override
-	public boolean onKeyDown(int keyCode, KeyEvent event){
-		// 是否触发按键为back键    
-	    if (keyCode == KeyEvent.KEYCODE_BACK) { 
-	         
-	        // 实例化 Bundle，设置需要传递的参数 
-	        Bundle bundle = new Bundle(); 
-	        bundle.putString("phoneNO", "020-123"); 
-	         
-	        setResult(RESULT_CANCELED, this.getIntent().putExtras(bundle)); 
-	        this.finish(); 
-	        return true; 
-	    }else { 
-	        return super.onKeyDown(keyCode, event); 
-	    } 
-		
-	}
 }

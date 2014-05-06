@@ -54,7 +54,7 @@ public class MainActivity extends Activity {
 				Intent intent= new Intent();
 				intent.setClass(MainActivity.this, picView.class);
 				startActivity(intent);
-				finish();
+//				finish();
 			}
 		});
 	}
