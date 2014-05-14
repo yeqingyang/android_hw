@@ -32,11 +32,17 @@ public class MainActivity extends Activity {
 		bn2.setText(R.string.ok2);
 		bn2.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT));
+		
+		final Button bn3 = new Button(this);
+		bn3.setText(R.string.ok3);
+		bn3.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
+				ViewGroup.LayoutParams.WRAP_CONTENT));
 		//向layout中添加textview bn
 		
 		layout.addView(bn);
 		layout.addView(show);
 		layout.addView(bn2);
+		layout.addView(bn3);
 		//为按钮绑定一个事件监听器
 		bn.setOnClickListener(new OnClickListener() {
 			
@@ -52,7 +58,18 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
 				Intent intent= new Intent();
-				intent.setClass(MainActivity.this, picView.class);
+				intent.setClass(MainActivity.this, PicActivity.class);
+				startActivity(intent);
+//				finish();
+			}
+		});
+		bn3.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent= new Intent();
+				intent.setClass(MainActivity.this, BallActivity.class);
 				startActivity(intent);
 //				finish();
 			}

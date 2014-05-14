@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="ok">TIME</string>
     <string name="ok2">PIC</string>
+    <string name="ok3">BALL</string>
 
 </resources>

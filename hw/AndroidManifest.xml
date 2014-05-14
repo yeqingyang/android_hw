@@ -23,7 +23,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.hw.picView">
+            android:name="com.example.hw.PicActivity">
+        </activity>
+        <activity
+            android:name="com.example.hw.BallActivity">
         </activity>
     </application>
 

@@ -16,7 +16,7 @@ public class BallActivity extends Activity{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ball);
-		RelativeLayout main = (RelativeLayout) findViewById(R.id.root);
+		RelativeLayout root = (RelativeLayout) findViewById(R.id.root);
 		final BallView ball = new BallView(this);
 		ball.setOnTouchListener(new OnTouchListener() {
 			
@@ -30,7 +30,7 @@ public class BallActivity extends Activity{
 			}
 		});
 		
-		Button bn = (Button)findViewById(R.id.button1);
+		Button bn = (Button)findViewById(R.id.button2);
 		bn.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -40,5 +40,6 @@ public class BallActivity extends Activity{
 				finish();
 			}
 		});
+		root.addView(ball);
 	}
 }

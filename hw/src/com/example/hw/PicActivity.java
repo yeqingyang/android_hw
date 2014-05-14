@@ -13,7 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-public class picView extends Activity {
+public class PicActivity extends Activity {
 	int[] images = new int[] { R.drawable.balloon, R.drawable.bear, };
 	int curImg = 0;
 
