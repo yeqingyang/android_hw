@@ -7,5 +7,7 @@
     <string name="ok">TIME</string>
     <string name="ok2">PIC</string>
     <string name="ok3">BALL</string>
+    <string name="ok5">TEXT</string>
+    <string name="button_back">BACK</string>
 
 </resources>

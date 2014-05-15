@@ -12,6 +12,6 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:text="BACK"/>
+        android:text="@string/button_back"/>
     
 </RelativeLayout>
