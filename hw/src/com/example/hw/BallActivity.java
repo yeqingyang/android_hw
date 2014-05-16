@@ -18,6 +18,7 @@ public class BallActivity extends Activity{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.ball);
 		RelativeLayout root = (RelativeLayout) findViewById(R.id.root);
+		RelativeLayout child = (RelativeLayout) findViewById(R.id.child);
 		final BallView ball = new BallView(this);
 		ball.setMinimumHeight(getWallpaperDesiredMinimumHeight());
 		ball.setOnTouchListener(new OnTouchListener() {
@@ -34,7 +35,7 @@ public class BallActivity extends Activity{
 				ball.currentX = event.getX();
 				ball.currentY = event.getY();
 				ball.invalidate();
-				return false;
+				return true;
 			}
 			
 		});
@@ -48,6 +49,6 @@ public class BallActivity extends Activity{
 				finish();
 			}
 		});
-		root.addView(ball);
+		child.addView(ball);
 	}
 }

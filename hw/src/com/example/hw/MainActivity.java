@@ -21,29 +21,29 @@ public class MainActivity extends Activity {
 		LinearLayout layout = new LinearLayout(this);
 		super.setContentView(layout);
 		layout.setOrientation(LinearLayout.VERTICAL);
-		//´´½¨Ò»¸öTextView
+		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½TextView
 		final TextView show = new TextView(this);
-		//´´½¨Ò»¸öbutton
+		//ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½button
 		final Button bn = new Button(this);
 		bn.setText(R.string.ok);
-		bn.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
+		bn.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT));
 		final Button bn2 = new Button(this);
 		bn2.setText(R.string.ok2);
-		bn2.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
+		bn2.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT));
 		
 		final Button bn3 = new Button(this);
 		bn3.setText(R.string.ok3);
-		bn3.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.FILL_PARENT,
+		bn3.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT));
-		//ÏòlayoutÖÐÌí¼Ótextview bn
+		//ï¿½ï¿½layoutï¿½ï¿½ï¿½ï¿½ï¿½textview bn
 		
 		layout.addView(bn);
 		layout.addView(show);
 		layout.addView(bn2);
 		layout.addView(bn3);
-		//Îª°´Å¥°ó¶¨Ò»¸öÊÂ¼þ¼àÌýÆ÷
+		//Îªï¿½ï¿½Å¥ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		bn.setOnClickListener(new OnClickListener() {
 			
 			@Override
