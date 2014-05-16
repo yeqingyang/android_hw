@@ -3,6 +3,7 @@ package com.example.hw;
 import android.app.Activity;
 import android.os.Bundle;
 import android.provider.ContactsContract.CommonDataKinds.Event;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -18,16 +19,24 @@ public class BallActivity extends Activity{
 		setContentView(R.layout.ball);
 		RelativeLayout root = (RelativeLayout) findViewById(R.id.root);
 		final BallView ball = new BallView(this);
+		ball.setMinimumHeight(getWallpaperDesiredMinimumHeight());
 		ball.setOnTouchListener(new OnTouchListener() {
 			
 			@Override
 			public boolean onTouch(View arg0, MotionEvent event) {
 				// TODO Auto-generated method stub
+				if(event.getAction() == MotionEvent.ACTION_DOWN){
+					Log.e("demp:","it's down");
+				}
+				if(event.getAction() == MotionEvent.ACTION_UP){
+					Log.e("demp:","it's up");
+				}
 				ball.currentX = event.getX();
 				ball.currentY = event.getY();
 				ball.invalidate();
-				return true;
+				return false;
 			}
+			
 		});
 		
 		Button bn = (Button)findViewById(R.id.button2);
@@ -36,7 +45,7 @@ public class BallActivity extends Activity{
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				//Ö÷activityÃ»ÓÐfinishÕâÀïfinishºó·µ»ØÖ÷activity
+				//ï¿½ï¿½activityÃ»ï¿½ï¿½finishï¿½ï¿½ï¿½ï¿½finishï¿½ó·µ»ï¿½ï¿½ï¿½activity
 				finish();
 			}
 		});
