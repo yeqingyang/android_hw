@@ -37,12 +37,18 @@ public class MainActivity extends Activity {
 		bn3.setText(R.string.ok3);
 		bn3.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT));
+		
+		final Button bn4 = new Button(this);
+		bn4.setText("Text");
+		bn4.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+				ViewGroup.LayoutParams.WRAP_CONTENT));
 		//��layout�����textview bn
 		
 		layout.addView(bn);
 		layout.addView(show);
 		layout.addView(bn2);
 		layout.addView(bn3);
+		layout.addView(bn4);
 		//Ϊ��ť��һ���¼�������
 		bn.setOnClickListener(new OnClickListener() {
 			
@@ -70,6 +76,17 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent= new Intent();
 				intent.setClass(MainActivity.this, BallActivity.class);
+				startActivity(intent);
+//				finish();
+			}
+		});
+		bn4.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent= new Intent();
+				intent.setClass(MainActivity.this, TextActivity.class);
 				startActivity(intent);
 //				finish();
 			}

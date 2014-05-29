@@ -28,6 +28,9 @@
         <activity
             android:name="com.example.hw.BallActivity">
         </activity>
+        <activity
+            android:name="com.example.hw.TextActivity">
+        </activity>
     </application>
 
 </manifest>

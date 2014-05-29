@@ -5,6 +5,34 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     >
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="我爱你"
+        android:textSize="20pt"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="singlesinglesinglesinglesdsfsdfsdfdsfsdfsdfsfsdhahah"
+        android:ellipsize="middle"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="test lpz8120903@163.com "
+        android:autoLink="email"
+        />
+     <TextView
+        android:id="@+id/passwd"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:text="@string/hello"
+        android:password="true"
+        />
     <Button 
         android:id="@+id/button2"
         style="?android:attr/buttonStyleSmall"
@@ -12,5 +40,19 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="5dp"
         android:text="@string/button_back"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="带边框"
+        android:textSize="20pt"
+        android:background="@drawable/bg_border"
+        />
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="带图片"
+        android:textSize="20pt"
+        android:background="@drawable/bg_border"
+        />
     
 </LinearLayout>
