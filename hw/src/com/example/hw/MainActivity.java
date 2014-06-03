@@ -42,6 +42,11 @@ public class MainActivity extends Activity {
 		bn4.setText("Text");
 		bn4.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
 				ViewGroup.LayoutParams.WRAP_CONTENT));
+		
+		final Button bn5 = new Button(this);
+		bn5.setText("Table");
+		bn5.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
+				ViewGroup.LayoutParams.WRAP_CONTENT));
 		//��layout�����textview bn
 		
 		layout.addView(bn);
@@ -49,6 +54,7 @@ public class MainActivity extends Activity {
 		layout.addView(bn2);
 		layout.addView(bn3);
 		layout.addView(bn4);
+		layout.addView(bn5);
 		//Ϊ��ť��һ���¼�������
 		bn.setOnClickListener(new OnClickListener() {
 			
@@ -87,6 +93,17 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				Intent intent= new Intent();
 				intent.setClass(MainActivity.this, TextActivity.class);
+				startActivity(intent);
+//				finish();
+			}
+		});
+		bn5.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent= new Intent();
+				intent.setClass(MainActivity.this, TableActivity.class);
 				startActivity(intent);
 //				finish();
 			}

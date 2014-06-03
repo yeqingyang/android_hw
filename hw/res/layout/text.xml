@@ -52,7 +52,8 @@
         android:layout_height="wrap_content"
         android:text="带图片"
         android:textSize="20pt"
-        android:background="@drawable/bg_border"
+        android:drawableLeft="@drawable/icon"
         />
+    
     
 </LinearLayout>

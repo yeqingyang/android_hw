@@ -31,6 +31,9 @@
         <activity
             android:name="com.example.hw.TextActivity">
         </activity>
+        <activity
+            android:name="com.example.hw.TableActivity">
+        </activity>
     </application>
 
 </manifest>
